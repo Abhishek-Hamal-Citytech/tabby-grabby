@@ -1,0 +1,41 @@
+{
+  "name": "tabby-grabby",
+  "version": "1.0.0",
+  "description": "Professional tab and bookmark management browser extension",
+  "main": "popup.js",
+  "scripts": {
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "lint": "eslint src/ tests/ *.js",
+    "build": "npm run test && npm run lint",
+    "package": "npm run build && node scripts/package.js"
+  },
+  "keywords": [
+    "browser-extension",
+    "tabs",
+    "bookmarks",
+    "chrome",
+    "firefox"
+  ],
+  "author": "Tabby Grabby Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/chrome": "*",
+    "eslint": "^8.0.0",
+    "jest": "^29.0.0",
+    "jest-environment-jsdom": "^30.0.5"
+  },
+  "jest": {
+    "testEnvironment": "jsdom",
+    "setupFilesAfterEnv": [
+      "<rootDir>/tests/setup.js"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "*.js",
+      "!tests/**/*",
+      "!node_modules/**/*"
+    ]
+  }
+}
