@@ -14,11 +14,11 @@ document.addEventListener('DOMContentLoaded', async () => {
     /**
      * Show status message
      * @param {string} message Message to display
-     * @param {string} type Type of message (success, error, info)
+     * @param {string} type Type of message (success, error, info, loading)
      */
     function showStatus(message, type = 'info') {
         status.textContent = message;
-        status.className = `status ${type}`;
+        status.className = `status-label ${type}`;
         status.classList.remove('hidden');
         
         // Auto-hide after 5 seconds for success messages
@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', async () => {
     exportBtn.addEventListener('click', async () => {
         try {
             setButtonsDisabled(true);
-            showStatus('Collecting tabs and bookmarks...', 'info');
+            showStatus('Collecting tabs and bookmarks...', 'loading');
             
             const result = await exportService.exportAll();
             
@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', async () => {
         
         try {
             setButtonsDisabled(true);
-            showStatus('Validating import file...', 'info');
+            showStatus('Validating import file...', 'loading');
             
             // Get preview information
             const preview = await importService.getImportPreview(file);
@@ -90,7 +90,7 @@ document.addEventListener('DOMContentLoaded', async () => {
             const confirmMessage = `This will import ${preview.tabCount} tabs and ${preview.bookmarkCount} bookmarks. Continue?`;
             
             if (confirm(confirmMessage)) {
-                showStatus('Importing data...', 'info');
+                showStatus('Importing data...', 'loading');
                 
                 const result = await importService.importFromFile(file);
                 

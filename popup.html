@@ -8,26 +8,36 @@
 </head>
 <body>
     <div class="container">
+        <!-- Header Section -->
         <div class="header">
-            <h1>Tabby Grabby</h1>
-            <p class="subtitle">Tab & Bookmark Manager</p>
+            <div class="brand">
+                <img src="icons/icon32.png" alt="Tabby Grabby Cat Icon" class="brand-icon">
+                <div class="brand-text">
+                    <h1>Tabby Grabby</h1>
+                    <p class="subtitle">Tab & Bookmark Manager</p>
+                </div>
+            </div>
         </div>
         
+        <!-- Action Area Section -->
         <div class="actions">
-            <button id="exportBtn" class="btn btn-primary">
-                <span class="icon">📤</span>
+            <button id="exportBtn" class="btn btn-export" aria-label="Export all tabs and bookmarks">
+                <span class="icon" aria-hidden="true">⬇</span>
                 Export All
             </button>
             
-            <button id="importBtn" class="btn btn-secondary">
-                <span class="icon">📥</span>
+            <button id="importBtn" class="btn btn-import" aria-label="Import tabs and bookmarks from file">
+                <span class="icon" aria-hidden="true">⬆</span>
                 Import From
             </button>
         </div>
         
-        <div id="status" class="status hidden"></div>
+        <!-- Status Footer Section -->
+        <div class="footer">
+            <div id="status" class="status-label hidden" role="status" aria-live="polite"></div>
+        </div>
         
-        <input type="file" id="fileInput" accept=".json" style="display: none;">
+        <input type="file" id="fileInput" accept=".json" style="display: none;" aria-label="Select JSON file to import">
     </div>
     
     <!-- Load modules -->
