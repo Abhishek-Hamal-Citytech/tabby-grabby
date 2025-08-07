@@ -6,8 +6,8 @@ body {
     margin: 0;
     padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #333;
+    background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 100%);
+    color: #f5f5f5;
     line-height: 1.4;
 }
 
@@ -27,7 +27,7 @@ body {
     display: flex;
     align-items: center;
     gap: 12px;
-    color: white;
+    color: #ffffff;
 }
 
 .brand-icon {
@@ -52,7 +52,7 @@ body {
     margin: 0;
     font-size: 13px;
     font-weight: 400;
-    color: #B0B0B0;
+    color: #9ca3af;
     line-height: 1.4;
 }
 
@@ -76,18 +76,18 @@ body {
     font-weight: 500;
     cursor: pointer;
     transition: all 0.2s ease;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
     line-height: 1.4;
 }
 
 .btn:hover {
     transform: translateY(-1px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
 }
 
 .btn:active {
     transform: translateY(0);
-    box-shadow: 0 1px 2px rgba(0,0,0,0.1);
+    box-shadow: 0 1px 2px rgba(0,0,0,0.3);
 }
 
 .btn:focus {
@@ -96,21 +96,21 @@ body {
 }
 
 .btn-export {
-    background: #10B981;
-    color: #FFFFFF;
+    background: #22c55e;
+    color: #ffffff;
 }
 
 .btn-export:hover {
-    background: #059669;
+    background: #16a34a;
 }
 
 .btn-import {
-    background: #3B82F6;
-    color: #FFFFFF;
+    background: #3b82f6;
+    color: #ffffff;
 }
 
 .btn-import:hover {
-    background: #2563EB;
+    background: #2563eb;
 }
 
 .btn:disabled {
@@ -132,7 +132,7 @@ body {
 
 .status-label {
     font-size: 12px;
-    color: #6B7280;
+    color: #9ca3af;
     text-align: center;
     padding: 8px 12px;
     border-radius: 6px;
@@ -141,9 +141,9 @@ body {
 }
 
 .status-label.success {
-    background: rgba(16, 185, 129, 0.1);
-    color: #059669;
-    border: 1px solid rgba(16, 185, 129, 0.3);
+    background: rgba(34, 197, 94, 0.15);
+    color: #4ade80;
+    border: 1px solid rgba(34, 197, 94, 0.3);
 }
 
 .status-label.success::before {
@@ -152,8 +152,8 @@ body {
 }
 
 .status-label.error {
-    background: rgba(239, 68, 68, 0.1);
-    color: #DC2626;
+    background: rgba(239, 68, 68, 0.15);
+    color: #f87171;
     border: 1px solid rgba(239, 68, 68, 0.3);
 }
 
@@ -163,8 +163,8 @@ body {
 }
 
 .status-label.info {
-    background: rgba(59, 130, 246, 0.1);
-    color: #2563EB;
+    background: rgba(59, 130, 246, 0.15);
+    color: #60a5fa;
     border: 1px solid rgba(59, 130, 246, 0.3);
 }
 
